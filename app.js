@@ -1,6 +1,6 @@
-const passwordBox = document.getElementById("password");
+const passwordBox = document.querySelector("#password");
 const length = 12;
-const generateButton = document.getElementById("generateButton");
+const generateButton = document.querySelector("#generateButton");
 const copyButton = document.querySelector(".copy");
 //const passwordBox = document.querySelector(".passowrd");
 
@@ -32,7 +32,7 @@ function createPassword(){
     passwordBox.value = password;
 }
 
-function copyPassword(){
-    passwordBox.select();
-    document.execCommand("copy");
+function copyPassword() {
+  navigator.clipboard.writeText(passwordBox.value);
+  alert("Password copied to clipboard!");
 }
