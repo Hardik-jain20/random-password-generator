@@ -33,6 +33,6 @@ function createPassword(){
 }
 
 function copyPassword(){
-    password.select();
+    passwordBox.select();
     document.execCommand("copy");
 }
